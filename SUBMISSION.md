@@ -22,7 +22,7 @@ licenses pass. The custom validator re-fetches the evidence and compares the
 decision-bearing fields, so the model cannot invent favorable license terms.
 Other contracts can consume `is_clear(package_id)`. The repository includes
 source, tests, deployment instructions, and a clear state model for DeFi
-dependency firewalls, software procurement, DAOs, and package registries.
+dependency firewalls, procurement, DAOs, and package registries.
 
 ## Deployed evidence
 
