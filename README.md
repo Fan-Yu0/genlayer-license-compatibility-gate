@@ -4,6 +4,8 @@ A reusable GenLayer Intelligent Contract for evidence-backed open-source
 license screening in DeFi, software procurement, and on-chain package
 registries.
 
+Repository: <https://github.com/Fan-Yu0/genlayer-license-compatibility-gate>
+
 ## Problem
 
 A release page can claim one license while the repository ships another. Even
@@ -108,6 +110,8 @@ contracts/license_compatibility_gate.py
 tests/direct/test_license_compatibility_gate.py
 deploy/deployScript.ts
 gltest.config.yaml
+evidence/deployment.json
+evidence/studio-screening.png
 SUBMISSION.md
 ```
 
@@ -145,22 +149,39 @@ genlayer network
 genlayer deploy
 ```
 
-## Suggested live example
+## Current deployment
+
+- Contract: `0x2Df63f0a2AE4532f8D2CD726B3919585E79110fa`
+- Network: GenLayer Studio stable (`studionet`)
+- Deployment status: `FINALIZED`
+- Explorer:
+  https://explorer-studio.genlayer.com/address/0x2Df63f0a2AE4532f8D2CD726B3919585E79110fa
+- Deployment transaction:
+  https://explorer-studio.genlayer.com/tx/0x728b1ca1cb050e2fd20b1453a81522df384c28eb70a52ae245647b157dc7e65c
+- Live package: `pallets/flask`
+- Registration transaction:
+  https://explorer-studio.genlayer.com/tx/0xc228193e8639c0d093e12b9ca0b617d4ac232f18db9e527c09f1efb4cf2f3f18
+- Screening transaction:
+  https://explorer-studio.genlayer.com/tx/0xb77ec1f1b5d380861b03e5fbf66bfb81124ea7e8ff396f14801b67dd43079b41
+- Screening result: `BSD-3-Clause`, consistent evidence, round 1, decision
+  `COMPATIBLE` (`decision = 1`)
+
+## Live example
 
 Use a public release with a machine-readable declaration and canonical license
-text. A good first example is an Apache-2.0 package that requires commercial
-use and a patent grant:
+text. The deployed example uses Flask's BSD-3-Clause license with a
+commercial-use requirement:
 
 ```text
 package_id: pallets/flask
 release_url: https://pypi.org/project/Flask/
-license_url: https://github.com/pallets/flask/blob/main/LICENSE.txt
+license_url: https://raw.githubusercontent.com/pallets/flask/main/LICENSE.txt
 max_copyleft: 0
-policy_flags: 3
+policy_flags: 1
 ```
 
-Use the raw GitHub license URL in Studio if the rendered page does not expose
-enough license text.
+Call `screen("pallets/flask")` to refresh the evidence. Query
+`get_screening("pallets/flask")` for the current result.
 
 ## Security notes
 

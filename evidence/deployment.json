@@ -1,0 +1,26 @@
+{
+  "network": "studionet",
+  "contract": "0x2Df63f0a2AE4532f8D2CD726B3919585E79110fa",
+  "deployment_tx": "0x728b1ca1cb050e2fd20b1453a81522df384c28eb70a52ae245647b157dc7e65c",
+  "deployment_status": "FINALIZED",
+  "publisher": "0x4Af67432f94b54191174b5E039eeC288757953aE",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x2Df63f0a2AE4532f8D2CD726B3919585E79110fa",
+  "example": {
+    "package_id": "pallets/flask",
+    "release_url": "https://pypi.org/project/Flask/",
+    "license_url": "https://raw.githubusercontent.com/pallets/flask/main/LICENSE.txt",
+    "max_copyleft": 0,
+    "policy_flags": 1,
+    "registration_tx": "0xc228193e8639c0d093e12b9ca0b617d4ac232f18db9e527c09f1efb4cf2f3f18",
+    "screening_tx": "0xb77ec1f1b5d380861b03e5fbf66bfb81124ea7e8ff396f14801b67dd43079b41",
+    "screening_status": "FINALIZED",
+    "license_id": "BSD-3-Clause",
+    "copyleft_level": 0,
+    "commercial_use": true,
+    "patent_grant": false,
+    "attribution_required": true,
+    "source_consistency": "consistent",
+    "decision": 1,
+    "round": 1
+  }
+}

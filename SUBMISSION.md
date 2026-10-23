@@ -26,18 +26,29 @@ dependency firewalls, software procurement, DAOs, and package registries.
 
 ## Deployed evidence
 
-Complete after publishing and deploying:
-
-- Public source repository: `REPOSITORY_URL_TO_ADD`
-- Contract: `CONTRACT_ADDRESS_TO_ADD`
-- Contract Explorer: `CONTRACT_EXPLORER_URL_TO_ADD`
-- Deployment transaction: `DEPLOY_TX_TO_ADD`
-- Deployment Explorer: `DEPLOY_EXPLORER_URL_TO_ADD`
+- Public source repository:
+  https://github.com/Fan-Yu0/genlayer-license-compatibility-gate
+- Contract: `0x2Df63f0a2AE4532f8D2CD726B3919585E79110fa`
+- Contract Explorer:
+  https://explorer-studio.genlayer.com/address/0x2Df63f0a2AE4532f8D2CD726B3919585E79110fa
+- Deployment transaction:
+  `0x728b1ca1cb050e2fd20b1453a81522df384c28eb70a52ae245647b157dc7e65c`
+- Deployment Explorer:
+  https://explorer-studio.genlayer.com/tx/0x728b1ca1cb050e2fd20b1453a81522df384c28eb70a52ae245647b157dc7e65c
 - Deployment status: `FINALIZED`
-- Successful screening transaction: `SCREEN_TX_TO_ADD`
-- Screening Explorer: `SCREEN_EXPLORER_URL_TO_ADD`
+- Package registration transaction:
+  `0xc228193e8639c0d093e12b9ca0b617d4ac232f18db9e527c09f1efb4cf2f3f18`
+- Registration Explorer:
+  https://explorer-studio.genlayer.com/tx/0xc228193e8639c0d093e12b9ca0b617d4ac232f18db9e527c09f1efb4cf2f3f18
+- Successful screening transaction:
+  `0xb77ec1f1b5d380861b03e5fbf66bfb81124ea7e8ff396f14801b67dd43079b41`
+- Screening Explorer:
+  https://explorer-studio.genlayer.com/tx/0xb77ec1f1b5d380861b03e5fbf66bfb81124ea7e8ff396f14801b67dd43079b41
 - Screening result: `MAJORITY_AGREE`, `ACCEPTED`
 - Final decision: `COMPATIBLE` (`decision = 1`)
+- Detected license: `BSD-3-Clause`
+- Source consistency: `consistent`
+- Screening round: `1`
 
 ## First live example
 
@@ -46,7 +57,7 @@ package_id: pallets/flask
 release_url: https://pypi.org/project/Flask/
 license_url: https://raw.githubusercontent.com/pallets/flask/main/LICENSE.txt
 max_copyleft: 0
-policy_flags: 3
+policy_flags: 1
 ```
 
 Then call `screen("pallets/flask")`.
